@@ -1,0 +1,4 @@
+# Local only: the earlier Next.js version, source photos and mockups, editor settings
+_nextjs/
+design/
+.claude/

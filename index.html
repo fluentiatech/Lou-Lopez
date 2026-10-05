@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lou López — Basketball player</title>
+    <meta
+      name="description"
+      content="Official website of Lou López Sénéchal, professional basketball player. Same passion. Bigger dreams."
+    />
+    <meta name="theme-color" content="#f2eee9" />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="fonts/montserrat-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link
+      rel="preload"
+      as="image"
+      href="img/lou-hero.webp"
+      imagesrcset="img/lou-hero.webp 1304w, img/lou-hero-1956.webp 1956w, img/lou-hero-2608.webp 2608w"
+      imagesizes="(max-aspect-ratio: 21/20) min(130vw, 62vh), (max-width: 640px) min(130vw, 62vh), min(72vw, 128vh)"
+      fetchpriority="high"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="#home" class="brand" aria-label="Lou López, home">
+          <!-- "LL" monogram: two leaning L's with the accent of López between them -->
+          <svg class="brand__mark" viewBox="0 0 48 48" fill="currentColor" aria-hidden="true">
+            <path d="M8 5 16.5 3.5 12 35l9-1.2-1.4 5.4L1.8 41.5Z" />
+            <path d="M21 2.6 25.6 1.4 19.4 29.5Z" />
+            <path d="M28.3 13.6 36.6 11.4 31.6 38.3l15-3-2 5.5L22 45.6Z" />
+          </svg>
+          <span class="brand__name">Lou López</span>
+        </a>
+
+        <nav class="nav" aria-label="Main">
+          <a href="#home" aria-current="location">Home</a>
+          <a href="#about">About</a>
+          <a href="#career">Career</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- Mobile only. The menu opens while #menu is the URL target, so it needs no JavaScript. -->
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <a class="menu-toggle__open" href="#menu" aria-label="Open menu"></a>
+          <a class="menu-toggle__close" href="#home" aria-label="Close menu"></a>
+        </div>
+      </div>
+
+      <nav id="menu" class="menu" aria-label="Mobile">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#career">Career</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- All SVG coordinates are in the design stage: 1672 × 941 (the approved mockup) -->
+      <section id="home" class="hero">
+        <div class="hero__stage">
+          <!-- Window light falling across the wall. The edge is one huge soft circle,
+               so it keeps running past the stage on wide or tall screens. -->
+          <svg class="hero__light" viewBox="0 0 1672 941" aria-hidden="true">
+            <defs>
+              <radialGradient id="hero-light" gradientUnits="userSpaceOnUse" cx="-2382" cy="6101" r="6408">
+                <stop offset="0.9958" stop-color="#f2eee9" />
+                <stop offset="1" stop-color="#f2eee9" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+            <circle cx="-2382" cy="6101" r="6408" fill="url(#hero-light)" />
+          </svg>
+
+          <div class="hero__copy">
+            <p class="hero__eyebrow">Basketball player</p>
+            <h1 class="hero__title">
+              <span>Lou</span>
+              <span>López</span>
+            </h1>
+            <p class="hero__tagline">
+              Same passion.<br />
+              Bigger dreams.
+            </p>
+            <a class="hero__cta" href="#about">
+              About me
+              <svg viewBox="0 0 24 10" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+                <path d="M0 5h23M18.6 0.8 23 5l-4.4 4.2" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero__figure">
+            <svg class="hero__mark" viewBox="1220 142 410 640" fill="currentColor" aria-hidden="true">
+              <path d="M1356 159 1456 142 1329 639l63-9.5-7 27L1220 682ZM1481 299l96-18-107 424 160-35-19 61-265 51Z" />
+            </svg>
+            <img
+              class="hero__player"
+              src="img/lou-hero.webp"
+              srcset="img/lou-hero.webp 1304w, img/lou-hero-1956.webp 1956w, img/lou-hero-2608.webp 2608w"
+              sizes="(max-aspect-ratio: 21/20) min(130vw, 62vh), (max-width: 640px) min(130vw, 62vh), min(72vw, 128vh)"
+              alt="Lou López in her white game uniform, laughing as she flicks a basketball up with her foot"
+              width="1304"
+              height="1315"
+              fetchpriority="high"
+              draggable="false"
+            />
+          </div>
+
+          <a class="hero__scroll" href="#about">
+            <span class="hero__scroll-line" aria-hidden="true"></span>
+            Scroll
+          </a>
+        </div>
+      </section>
+
+      <!-- ─────────────── About ───────────────
+           Copy is a draft in Lou's voice, built only from things she has said in interviews
+           (Gigantes 2024 and 2025, ESPN 2023, Milenio 2025, her May 2026 statement). She should review it.
+
+           Photos come from design/fotos-candidatas/ via scripts/fotos.py and are credited under
+           each one. They belong to their owners: get permission before publishing the site.
+           The childhood slot is still a placeholder: to fill it, put an <img> inside the
+           .ph__frame and delete the .ph__mark and .ph__note. -->
+      <section id="about" class="about">
+        <div class="wrap">
+          <header class="about__head">
+            <p class="section-label"><span>01</span>About</p>
+            <h2 class="statement">
+              <span style="--i: 0">Mexico</span> <span style="--i: 1">and</span> <span style="--i: 2">France</span>
+              <span style="--i: 3">are</span> <span style="--i: 4">home.</span>
+              <strong>
+                <span style="--i: 5">Basketball</span> <span style="--i: 6">is</span> <span style="--i: 7">how</span>
+                <span style="--i: 8">I</span> <span style="--i: 9">found</span> <span style="--i: 10">my</span>
+                <span style="--i: 11">place.</span>
+              </strong>
+            </h2>
+          </header>
+
+          <div class="story">
+            <figure class="ph ph--portrait story__portrait reveal">
+              <div class="ph__frame">
+                <img src="img/about-portrait.webp" alt="Lou López in the black and yellow Hozono Global Jairis kit, holding a basketball on her shoulder and pointing at the camera" width="1280" height="1600" loading="lazy" />
+              </div>
+              <figcaption>Photo: Hozono Global Jairis</figcaption>
+            </figure>
+
+            <div class="story__text">
+              <article class="chapter reveal">
+                <h3>Two homes</h3>
+                <p>
+                  I was born in Guadalajara, to a Mexican father and a French mother. When I was five, my mum and I
+                  moved to Grenoble, and every year I went back to Mexico to see my dad. Growing up with two families
+                  and two cultures shaped who I am, and the way I play.
+                </p>
+              </article>
+
+              <article class="chapter reveal">
+                <h3>The court</h3>
+                <p>
+                  I was a shy kid in a new country. At eight I tried basketball at school. It was new to everyone in
+                  the class, so for once I wasn’t the outsider. On the court I felt like an equal.
+                </p>
+              </article>
+
+              <figure class="ph ph--landscape reveal">
+                <div class="ph__frame" role="img" aria-label="Photo to come: Lou as a child">
+                  <svg class="ph__mark" viewBox="0 0 48 48" fill="currentColor" aria-hidden="true">
+                    <path d="M8 5 16.5 3.5 12 35l9-1.2-1.4 5.4L1.8 41.5Z" />
+                    <path d="M21 2.6 25.6 1.4 19.4 29.5Z" />
+                    <path d="M28.3 13.6 36.6 11.4 31.6 38.3l15-3-2 5.5L22 45.6Z" />
+                  </svg>
+                  <span class="ph__note">Childhood, Grenoble or Guadalajara · 3:2</span>
+                </div>
+              </figure>
+
+              <article class="chapter reveal">
+                <h3>The long way</h3>
+                <p>
+                  Almost nothing went to plan. The year in Ireland was never the idea, but it taught me English and got
+                  me ready. From there my stepdad and I wrote to hundreds of American colleges, and a handful wrote
+                  back. I followed my instinct to Fairfield, stayed four years, and in the last one we won the
+                  conference for the first time in twenty-four. Then came a year at UConn, and a draft night when I
+                  heard my name and thought: why so soon?
+                </p>
+              </article>
+
+              <article class="chapter reveal">
+                <h3>Now</h3>
+                <p>
+                  Today I play in Spain for Hozono Global Jairis. After a lot of moving around, I’ve found stability
+                  here, and a club that feels like family. There have been injuries and long recoveries along the way.
+                  The goals stay the same.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <figure class="quote">
+          <svg class="quote__mark" viewBox="1220 142 410 640" fill="currentColor" aria-hidden="true">
+            <path d="M1356 159 1456 142 1329 639l63-9.5-7 27L1220 682ZM1481 299l96-18-107 424 160-35-19 61-265 51Z" />
+          </svg>
+          <div class="wrap">
+            <blockquote class="reveal">
+              There’s never a perfect path, a perfect way. <strong>There’s your way.</strong>
+            </blockquote>
+            <figcaption class="reveal">Lou, speaking to ESPN · 2023</figcaption>
+          </div>
+        </figure>
+
+        <div class="wrap">
+          <div class="glance">
+            <figure class="ph ph--wide reveal">
+              <div class="ph__frame">
+                <img src="img/about-jairis.webp" alt="Lou López, number 19, in the air after releasing a three-point shot in the 2025 Copa de la Reina final" width="1500" height="844" loading="lazy" />
+              </div>
+              <figcaption>Copa de la Reina final · 2025. Photo: Campo Atrás</figcaption>
+            </figure>
+
+            <dl class="facts reveal">
+              <div><dt>Born</dt><dd>Guadalajara, Mexico · 1998</dd></div>
+              <div><dt>Raised</dt><dd>Grenoble, France</dd></div>
+              <div><dt>Position</dt><dd>Small forward</dd></div>
+              <div><dt>Height</dt><dd>1.85 m · 6′1″</dd></div>
+              <div><dt>Club</dt><dd>Hozono Global Jairis</dd></div>
+              <div><dt>Speaks</dt><dd>Spanish, French, English</dd></div>
+            </dl>
+          </div>
+
+          <ul class="values">
+            <li class="reveal">
+              <h3>Team first</h3>
+              <p>The goals I enjoy most are the ones we share.</p>
+            </li>
+            <li class="reveal">
+              <h3>Adapt</h3>
+              <p>New countries, new languages, new roles. I settle in quickly, and every move has helped me grow.</p>
+            </li>
+            <li class="reveal">
+              <h3>Compete</h3>
+              <p>I love to compete. Reaching the top level is hard, and staying there is just as hard.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Places she has lived and played, in order. Decorative: the second half repeats the first for the loop. -->
+        <div class="ticker" aria-hidden="true">
+          <div class="ticker__track">
+            <span>Guadalajara</span><span>Grenoble</span><span>Dublin</span><span>Fairfield</span><span>Storrs</span><span>Dallas</span><span>Brno</span><span>Alcantarilla</span>
+            <span>Guadalajara</span><span>Grenoble</span><span>Dublin</span><span>Fairfield</span><span>Storrs</span><span>Dallas</span><span>Brno</span><span>Alcantarilla</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────────── Career ───────────────
+           One stage per stop, in order. Numbers are per-game averages.
+           Sources: FEB official stats (Jairis, all competitions), FIBA (EuroCup Women 2024-25),
+           BeBasket (EuroCup Women 2025-26), Eurobasket (Brno), Wikipedia tables (NCAA and WNBA).
+           Photo placeholders work as in About: put an <img> inside the .ph__frame. -->
+      <section id="career" class="career">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="section-label"><span>02</span>Career</p>
+            <h2 class="statement">
+              <span style="--i: 0">The</span> <span style="--i: 1">road</span> <span style="--i: 2">so</span>
+              <span style="--i: 3">far,</span>
+              <strong><span style="--i: 4">stop</span> <span style="--i: 5">by</span> <span style="--i: 6">stop.</span></strong>
+            </h2>
+          </header>
+
+          <ol class="stages">
+            <li class="stage stage--brief">
+              <div class="stage__when">
+                <p class="stage__years">Until 2017</p>
+                <p class="stage__place">Grenoble, France</p>
+              </div>
+              <div class="stage__body">
+                <div class="stage__main reveal">
+                  <p class="stage__league"><span>01</span>Youth club</p>
+                  <h3 class="stage__team">La Tronche Meylan</h3>
+                  <p class="stage__text">First club, close to home. Where the game was learned.</p>
+                </div>
+              </div>
+            </li>
+            <li class="stage stage--brief">
+              <div class="stage__when">
+                <p class="stage__years">2017–18</p>
+                <p class="stage__place">Dublin, Ireland</p>
+              </div>
+              <div class="stage__body">
+                <div class="stage__main reveal">
+                  <p class="stage__league"><span>02</span>Academy</p>
+                  <h3 class="stage__team">North Atlantic Basketball Academy</h3>
+                  <p class="stage__text">A year of English and daily practice against the boys.</p>
+                </div>
+              </div>
+            </li>
+            <li class="stage">
+              <div class="stage__when">
+                <p class="stage__years">2018–22</p>
+                <p class="stage__place">Fairfield, USA</p>
+              </div>
+              <div class="stage__body">
+                <div class="stage__main reveal">
+                  <p class="stage__league"><span>03</span>NCAA Division I · MAAC</p>
+                  <h3 class="stage__team">Fairfield Stags</h3>
+                  <p class="stage__text">Rookie of the Year in the first season, Player of the Year in the last. Conference champions in 2022, the program’s first title in 24 years.</p>
+                  <table class="stats">
+                    <caption>Season averages with Fairfield Stags</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Season</th>
+                        <th scope="col"><abbr title="Games played">GP</abbr></th>
+                        <th scope="col" class="col-min"><abbr title="Minutes per game">MIN</abbr></th>
+                        <th scope="col"><abbr title="Points per game">PTS</abbr></th>
+                        <th scope="col"><abbr title="Rebounds per game">REB</abbr></th>
+                        <th scope="col"><abbr title="Assists per game">AST</abbr></th>
+                        <th scope="col"><abbr title="Three-point percentage">3P%</abbr></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><th scope="row"><span class="stat__season">2018–19</span><span class="stat__comp">NCAA · MAAC</span></th><td>22</td><td class="col-min">30.5</td><td class="stat__pts">11.8</td><td>4.7</td><td>1.8</td><td>32.8</td></tr>
+                      <tr><th scope="row"><span class="stat__season">2019–20</span><span class="stat__comp">NCAA · MAAC</span></th><td>30</td><td class="col-min">34.3</td><td class="stat__pts">15.5</td><td>5.7</td><td>1.6</td><td>39.2</td></tr>
+                      <tr><th scope="row"><span class="stat__season">2020–21</span><span class="stat__comp">NCAA · MAAC</span></th><td>16</td><td class="col-min">33.4</td><td class="stat__pts">16.9</td><td>3.4</td><td>1.6</td><td>40.7</td></tr>
+                      <tr><th scope="row"><span class="stat__season">2021–22</span><span class="stat__comp">NCAA · MAAC</span></th><td>31</td><td class="col-min">34.0</td><td class="stat__pts">19.5</td><td>4.6</td><td>1.1</td><td>40.9</td></tr>
+                    </tbody>
+                  </table>
+                  <ul class="honours">
+                    <li>MAAC Rookie of the Year · 2019</li>
+                    <li>First Team All-MAAC · 2020, 2021, 2022</li>
+                    <li>MAAC Player of the Year · 2022</li>
+                    <li>MAAC Tournament MVP · 2022</li>
+                  </ul>
+                </div>
+                <figure class="ph stage__photo reveal">
+                  <div class="ph__frame">
+                    <img src="img/career-fairfield.webp" alt="Lou López celebrating on court in a Fairfield Stags uniform, fists clenched" width="800" height="1000" loading="lazy" />
+                  </div>
+                  <figcaption>Photo: Fairfield Athletics</figcaption>
+                </figure>
+              </div>
+            </li>
+            <li class="stage">
+              <div class="stage__when">
+                <p class="stage__years">2022–23</p>
+                <p class="stage__place">Storrs, USA</p>
+              </div>
+              <div class="stage__body">
+                <div class="stage__main reveal">
+                  <p class="stage__league"><span>04</span>NCAA Division I · Big East</p>
+                  <h3 class="stage__team">UConn Huskies</h3>
+                  <p class="stage__text">One season, 37 games, 37 starts.</p>
+                  <table class="stats">
+                    <caption>Season averages with UConn Huskies</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Season</th>
+                        <th scope="col"><abbr title="Games played">GP</abbr></th>
+                        <th scope="col" class="col-min"><abbr title="Minutes per game">MIN</abbr></th>
+                        <th scope="col"><abbr title="Points per game">PTS</abbr></th>
+                        <th scope="col"><abbr title="Rebounds per game">REB</abbr></th>
+                        <th scope="col"><abbr title="Assists per game">AST</abbr></th>
+                        <th scope="col"><abbr title="Three-point percentage">3P%</abbr></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><th scope="row"><span class="stat__season">2022–23</span><span class="stat__comp">NCAA · Big East</span></th><td>37</td><td class="col-min">31.5</td><td class="stat__pts">15.5</td><td>3.1</td><td>1.6</td><td>44.0</td></tr>
+                    </tbody>
+                  </table>
+                  <ul class="honours">
+                    <li>First Team All-Big East · 2023</li>
+                    <li>Big East All-Tournament Team · 2023</li>
+                  </ul>
+                </div>
+                <figure class="ph stage__photo reveal">
+                  <div class="ph__frame">
+                    <img src="img/career-uconn.webp" alt="Lou López protecting the ball from a Marquette defender, playing for UConn" width="800" height="1000" loading="lazy" />
+                  </div>
+                  <figcaption>Photo: UConn Athletics</figcaption>
+                </figure>
+              </div>
+            </li>
+            <li class="stage">
+              <div class="stage__when">
+                <p class="stage__years">2023–24</p>
+                <p class="stage__place">Dallas, USA</p>
+              </div>
+              <div class="stage__body">
+                <div class="stage__main reveal">
+                  <p class="stage__league"><span>05</span>WNBA</p>
+                  <h3 class="stage__team">Dallas Wings</h3>
+                  <p class="stage__text">Fifth pick of the 2023 draft, and the first player born in Mexico to be selected. A knee operation pushed the debut back to 2024.</p>
+                  <table class="stats">
+                    <caption>Season averages with Dallas Wings</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Season</th>
+                        <th scope="col"><abbr title="Games played">GP</abbr></th>
+                        <th scope="col" class="col-min"><abbr title="Minutes per game">MIN</abbr></th>
+                        <th scope="col"><abbr title="Points per game">PTS</abbr></th>
+                        <th scope="col"><abbr title="Rebounds per game">REB</abbr></th>
+                        <th scope="col"><abbr title="Assists per game">AST</abbr></th>
+                        <th scope="col"><abbr title="Three-point percentage">3P%</abbr></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><th scope="row"><span class="stat__season">2023</span><span class="stat__comp">WNBA</span></th><td colspan="6" class="stat__note">Did not play · knee surgery</td></tr>
+                      <tr><th scope="row"><span class="stat__season">2024</span><span class="stat__comp">WNBA</span></th><td>27</td><td class="col-min">4.6</td><td class="stat__pts">0.9</td><td>0.4</td><td>0.4</td><td>20.0</td></tr>
+                    </tbody>
+                  </table>
+                  <ul class="honours">
+                    <li>No. 5 pick · 2023 WNBA Draft</li>
+                  </ul>
+                </div>
+                <figure class="ph stage__photo reveal">
+                  <div class="ph__frame">
+                    <img src="img/career-dallas.webp" alt="Portrait of Lou López smiling in a Dallas Wings jersey" width="608" height="760" loading="lazy" />
+                  </div>
+                  <figcaption>Photo: WNBA</figcaption>
+                </figure>
+              </div>
+            </li>
+            <li class="stage">
+              <div class="stage__when">
+                <p class="stage__years">2023</p>
+                <p class="stage__place">Brno, Czech Republic</p>
+              </div>
+              <div class="stage__body">
+                <div class="stage__main reveal">
+                  <p class="stage__league"><span>06</span>ŽBL · EuroCup Women</p>
+                  <h3 class="stage__team">Žabiny Brno</h3>
+                  <p class="stage__text">First months as a professional.</p>
+                  <table class="stats">
+                    <caption>Season averages with Žabiny Brno</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Season</th>
+                        <th scope="col"><abbr title="Games played">GP</abbr></th>
+                        <th scope="col" class="col-min"><abbr title="Minutes per game">MIN</abbr></th>
+                        <th scope="col"><abbr title="Points per game">PTS</abbr></th>
+                        <th scope="col"><abbr title="Rebounds per game">REB</abbr></th>
+                        <th scope="col"><abbr title="Assists per game">AST</abbr></th>
+                        <th scope="col"><abbr title="Three-point percentage">3P%</abbr></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><th scope="row"><span class="stat__season">2023–24</span><span class="stat__comp">ŽBL</span></th><td>8</td><td class="col-min">–</td><td class="stat__pts">9.8</td><td>3.4</td><td>–</td><td>–</td></tr>
+                      <tr><th scope="row"><span class="stat__season">2023–24</span><span class="stat__comp">EuroCup Women</span></th><td>8</td><td class="col-min">–</td><td class="stat__pts">9.8</td><td>1.8</td><td>1.4</td><td>–</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </li>
+            <li class="stage stage--brief">
+              <div class="stage__when">
+                <p class="stage__years">Since 2023</p>
+                <p class="stage__place">France</p>
+              </div>
+              <div class="stage__body">
+                <div class="stage__main reveal">
+                  <p class="stage__league"><span>07</span>Senior national team</p>
+                  <h3 class="stage__team">France</h3>
+                  <p class="stage__text">First call-up at 25, for the EuroBasket qualifiers.</p>
+                </div>
+              </div>
+            </li>
+            <li class="stage stage--current">
+              <div class="stage__when">
+                <p class="stage__years">2024–Now</p>
+                <p class="stage__place">Alcantarilla, Spain</p>
+              </div>
+              <div class="stage__body">
+                <div class="stage__main reveal">
+                  <p class="stage__league"><span>08</span>Liga Femenina Endesa · EuroCup Women <em>Current club</em></p>
+                  <h3 class="stage__team">Hozono Global Jairis</h3>
+                  <p class="stage__text">Copa de la Reina in 2025, the club’s first major title, with 27 points in the final. Under contract until 2027.</p>
+                  <table class="stats">
+                    <caption>Season averages with Hozono Global Jairis</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Season</th>
+                        <th scope="col"><abbr title="Games played">GP</abbr></th>
+                        <th scope="col" class="col-min"><abbr title="Minutes per game">MIN</abbr></th>
+                        <th scope="col"><abbr title="Points per game">PTS</abbr></th>
+                        <th scope="col"><abbr title="Rebounds per game">REB</abbr></th>
+                        <th scope="col"><abbr title="Assists per game">AST</abbr></th>
+                        <th scope="col"><abbr title="Three-point percentage">3P%</abbr></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><th scope="row"><span class="stat__season">2023–24</span><span class="stat__comp">LF Endesa · from January</span></th><td>13</td><td class="col-min">27.7</td><td class="stat__pts">10.8</td><td>2.4</td><td>1.1</td><td>44.2</td></tr>
+                      <tr><th scope="row"><span class="stat__season">2024–25</span><span class="stat__comp">LF Endesa</span></th><td>27</td><td class="col-min">24.7</td><td class="stat__pts">10.3</td><td>2.6</td><td>1.0</td><td>38.9</td></tr>
+                      <tr><th scope="row"><span class="stat__season">2024–25</span><span class="stat__comp">Copa de la Reina</span></th><td>3</td><td class="col-min">22.7</td><td class="stat__pts">18.7</td><td>3.0</td><td>0.7</td><td>66.7</td></tr>
+                      <tr><th scope="row"><span class="stat__season">2024–25</span><span class="stat__comp">EuroCup Women</span></th><td>8</td><td class="col-min">23.7</td><td class="stat__pts">11.0</td><td>2.8</td><td>1.6</td><td>35.1</td></tr>
+                      <tr><th scope="row"><span class="stat__season">2025–26</span><span class="stat__comp">LF Endesa · until February, knee injury</span></th><td>19</td><td class="col-min">26.1</td><td class="stat__pts">11.7</td><td>2.7</td><td>1.3</td><td>38.1</td></tr>
+                      <tr><th scope="row"><span class="stat__season">2025–26</span><span class="stat__comp">EuroCup Women</span></th><td>8</td><td class="col-min">25.8</td><td class="stat__pts">9.1</td><td>2.8</td><td>1.9</td><td>17.6</td></tr>
+                    </tbody>
+                  </table>
+                  <ul class="honours">
+                    <li>Copa de la Reina · 2025</li>
+                    <li>Copa de la Reina Best Five · 2025</li>
+                  </ul>
+                </div>
+                <figure class="ph stage__photo reveal">
+                  <div class="ph__frame">
+                    <img src="img/career-jairis.webp" alt="Lou López smiling on court in a yellow Hozono Global Jairis warm-up shirt with the number 19" width="416" height="520" loading="lazy" />
+                  </div>
+                  <figcaption>Photo: Gigantes del Basket</figcaption>
+                </figure>
+              </div>
+            </li>
+          </ol>
+
+          <p class="career__note">Per-game averages. Regular season unless stated.</p>
+        </div>
+      </section>
+
+      <!-- ─────────────── Gallery ───────────────
+           The tiles and lightboxes are generated: edit the list in scripts/galeria.py and run it.
+           No JavaScript: the team filter is radio buttons + :has(), and a photo opens while it is the URL target.
+           Photos are credited in the lightbox and belong to their owners (see design/fotos-galeria/FUENTES.md). -->
+      <section id="gallery" class="gallery">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="section-label"><span>03</span>Gallery</p>
+            <h2 class="statement">
+              <span style="--i: 0">The</span> <span style="--i: 1">game,</span>
+              <strong><span style="--i: 2">frame</span> <span style="--i: 3">by</span> <span style="--i: 4">frame.</span></strong>
+            </h2>
+          </header>
+
+          <fieldset class="gallery__filter">
+            <legend>Show photos from</legend>
+            <label><input type="radio" name="team" id="team-all" checked /><span>All</span></label>
+            <label><input type="radio" name="team" id="team-jairis" /><span>Jairis</span></label>
+            <label><input type="radio" name="team" id="team-uconn" /><span>UConn</span></label>
+            <label><input type="radio" name="team" id="team-fairfield" /><span>Fairfield</span></label>
+          </fieldset>
+
+          <!-- galeria:inicio (generated by scripts/galeria.py) -->
+          <div class="gallery__grid">
+            <a class="tile tile--big reveal" id="t-01" href="#foto-01" data-team="jairis">
+              <img src="img/galeria/01-t.webp" alt="Lou López smiling on court in the black Hozono Global Jairis kit" width="1280" height="720" loading="lazy" style="object-position: 60% 40%" />
+              <span class="tile__label">Hozono Global Jairis</span>
+            </a>
+            <a class="tile tile--tall reveal" id="t-02" href="#foto-02" data-team="jairis">
+              <img src="img/galeria/02-t.webp" alt="Lou López, number 19, seen from behind as she goes up with the ball among defenders in the Copa de la Reina final" width="700" height="1042" loading="lazy" style="object-position: 50% 45%" />
+              <span class="tile__label">Copa de la Reina final · 2025</span>
+            </a>
+            <a class="tile reveal" id="t-03" href="#foto-03" data-team="jairis">
+              <img src="img/galeria/03-t.webp" alt="The Hozono Global Jairis squad lifting the 2025 Copa de la Reina trophy on court under falling confetti" width="900" height="544" loading="lazy" style="object-position: 50% 60%" />
+              <span class="tile__label">Copa de la Reina champions · 2025</span>
+            </a>
+            <a class="tile tile--tall reveal" id="t-04" href="#foto-04" data-team="jairis">
+              <img src="img/galeria/04-t.webp" alt="Lou López dribbling up the floor next to a teammate in the Copa de la Reina final" width="700" height="1050" loading="lazy" style="object-position: 60% 42%" />
+              <span class="tile__label">Copa de la Reina final · 2025</span>
+            </a>
+            <a class="tile reveal" id="t-05" href="#foto-05" data-team="jairis">
+              <img src="img/galeria/05-t.webp" alt="Lou López laughing during a warm-up with Hozono Global Jairis" width="900" height="520" loading="lazy" style="object-position: 50% 35%" />
+              <span class="tile__label">Hozono Global Jairis</span>
+            </a>
+            <a class="tile reveal" id="t-06" href="#foto-06" data-team="jairis">
+              <img src="img/galeria/06-t.webp" alt="Lou López looking across the court during a home game in Alcantarilla" width="645" height="430" loading="lazy" style="object-position: 75% 40%" />
+              <span class="tile__label">Liga Femenina Endesa · 2024</span>
+            </a>
+            <a class="tile reveal" id="t-07" href="#foto-07" data-team="jairis">
+              <img src="img/galeria/07-t.webp" alt="Lou López, number 19, watching a team-mate's shot from the wing in the Copa de la Reina final" width="900" height="600" loading="lazy" style="object-position: 35% 50%" />
+              <span class="tile__label">Copa de la Reina final · 2025</span>
+            </a>
+            <a class="tile tile--big reveal" id="t-08" href="#foto-08" data-team="uconn">
+              <img src="img/galeria/08-t.webp" alt="Lou López driving to the basket for UConn against Duke" width="1280" height="720" loading="lazy" style="object-position: 45% 50%" />
+              <span class="tile__label">UConn · 2022–23</span>
+            </a>
+            <a class="tile tile--tall reveal" id="t-09" href="#foto-09" data-team="uconn">
+              <img src="img/galeria/09-t.webp" alt="Lou López protecting the ball from a Marquette defender" width="900" height="506" loading="lazy" style="object-position: 45% 40%" />
+              <span class="tile__label">UConn · 2022–23</span>
+            </a>
+            <a class="tile reveal" id="t-10" href="#foto-10" data-team="uconn">
+              <img src="img/galeria/10-t.webp" alt="Lou López, number 11, with her arms out wide at Villanova" width="900" height="506" loading="lazy" style="object-position: 50% 45%" />
+              <span class="tile__label">UConn · 2022–23</span>
+            </a>
+            <a class="tile reveal" id="t-11" href="#foto-11" data-team="uconn">
+              <img src="img/galeria/11-t.webp" alt="Lou López slapping hands with a UConn teammate" width="900" height="508" loading="lazy" style="object-position: 72% 40%" />
+              <span class="tile__label">UConn · 2022–23</span>
+            </a>
+            <a class="tile reveal" id="t-12" href="#foto-12" data-team="uconn">
+              <img src="img/galeria/12-t.webp" alt="Lou López talking with two UConn teammates during a game" width="900" height="506" loading="lazy" style="object-position: 58% 40%" />
+              <span class="tile__label">UConn · 2022–23</span>
+            </a>
+            <a class="tile tile--big reveal" id="t-13" href="#foto-13" data-team="fairfield">
+              <img src="img/galeria/13-t.webp" alt="Lou López shooting over a defender for Fairfield at Indiana" width="1280" height="852" loading="lazy" style="object-position: 52% 50%" />
+              <span class="tile__label">Fairfield · 2021–22</span>
+            </a>
+            <a class="tile reveal" id="t-14" href="#foto-14" data-team="fairfield">
+              <img src="img/galeria/14-t.webp" alt="Lou López going up for a shot against Texas in the NCAA Tournament" width="900" height="600" loading="lazy" style="object-position: 50% 45%" />
+              <span class="tile__label">NCAA Tournament · 2022</span>
+            </a>
+            <a class="tile reveal" id="t-15" href="#foto-15" data-team="fairfield">
+              <img src="img/galeria/15-t.webp" alt="Lou López celebrating on court with her fists clenched" width="900" height="600" loading="lazy" style="object-position: 48% 40%" />
+              <span class="tile__label">Fairfield · 2021–22</span>
+            </a>
+            <a class="tile reveal" id="t-16" href="#foto-16" data-team="fairfield">
+              <img src="img/galeria/16-t.webp" alt="Lou López finishing a layup for Fairfield" width="900" height="600" loading="lazy" style="object-position: 55% 45%" />
+              <span class="tile__label">Fairfield · 2021–22</span>
+            </a>
+            <a class="tile reveal" id="t-17" href="#foto-17" data-team="fairfield">
+              <img src="img/galeria/17-t.webp" alt="Lou López rising for a jump shot for Fairfield" width="900" height="600" loading="lazy" style="object-position: 45% 40%" />
+              <span class="tile__label">Fairfield · 2021–22</span>
+            </a>
+            <a class="tile reveal" id="t-18" href="#foto-18" data-team="fairfield">
+              <img src="img/galeria/18-t.webp" alt="Lou López driving past a Siena defender" width="900" height="600" loading="lazy" style="object-position: 62% 45%" />
+              <span class="tile__label">Fairfield · 2021–22</span>
+            </a>
+            <a class="tile reveal" id="t-19" href="#foto-19" data-team="fairfield">
+              <img src="img/galeria/19-t.webp" alt="Lou López shooting a jumper for Fairfield" width="900" height="491" loading="lazy" style="object-position: 50% 40%" />
+              <span class="tile__label">Fairfield · 2021–22</span>
+            </a>
+            <a class="tile reveal" id="t-20" href="#foto-20" data-team="fairfield">
+              <img src="img/galeria/20-t.webp" alt="Lou López dribbling against a Marist defender" width="900" height="490" loading="lazy" style="object-position: 35% 45%" />
+              <span class="tile__label">Fairfield · 2020–21</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lightbox" id="foto-01" role="dialog" aria-label="Photo 1 of 20">
+          <figure>
+            <img src="img/galeria/01.webp" alt="Lou López smiling on court in the black Hozono Global Jairis kit" width="1920" height="1080" loading="lazy" />
+            <figcaption>Hozono Global Jairis <span>Photo: Gigantes del Basket</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-20" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-02" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-01" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-02" role="dialog" aria-label="Photo 2 of 20">
+          <figure>
+            <img src="img/galeria/02.webp" alt="Lou López, number 19, seen from behind as she goes up with the ball among defenders in the Copa de la Reina final" width="1000" height="1488" loading="lazy" />
+            <figcaption><strong>Hozono Global Jairis</strong>Copa de la Reina final · 2025 <span>Photo: Campo Atrás</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-01" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-03" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-02" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-03" role="dialog" aria-label="Photo 3 of 20">
+          <figure>
+            <img src="img/galeria/03.webp" alt="The Hozono Global Jairis squad lifting the 2025 Copa de la Reina trophy on court under falling confetti" width="1600" height="968" loading="lazy" />
+            <figcaption><strong>Hozono Global Jairis</strong>Copa de la Reina champions · 2025 <span>Photo: Gigantes del Basket</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-02" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-04" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-03" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-04" role="dialog" aria-label="Photo 4 of 20">
+          <figure>
+            <img src="img/galeria/04.webp" alt="Lou López dribbling up the floor next to a teammate in the Copa de la Reina final" width="1000" height="1500" loading="lazy" />
+            <figcaption><strong>Hozono Global Jairis</strong>Copa de la Reina final · 2025 <span>Photo: Campo Atrás</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-03" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-05" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-04" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-05" role="dialog" aria-label="Photo 5 of 20">
+          <figure>
+            <img src="img/galeria/05.webp" alt="Lou López laughing during a warm-up with Hozono Global Jairis" width="900" height="520" loading="lazy" />
+            <figcaption>Hozono Global Jairis <span>Photo: Gigantes del Basket</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-04" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-06" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-05" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-06" role="dialog" aria-label="Photo 6 of 20">
+          <figure>
+            <img src="img/galeria/06.webp" alt="Lou López looking across the court during a home game in Alcantarilla" width="645" height="430" loading="lazy" />
+            <figcaption><strong>Hozono Global Jairis</strong>Liga Femenina Endesa · 2024 <span>Photo: FEB</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-05" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-07" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-06" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-07" role="dialog" aria-label="Photo 7 of 20">
+          <figure>
+            <img src="img/galeria/07.webp" alt="Lou López, number 19, watching a team-mate's shot from the wing in the Copa de la Reina final" width="1500" height="1000" loading="lazy" />
+            <figcaption><strong>Hozono Global Jairis</strong>Copa de la Reina final · 2025 <span>Photo: Campo Atrás</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-06" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-08" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-07" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-08" role="dialog" aria-label="Photo 8 of 20">
+          <figure>
+            <img src="img/galeria/08.webp" alt="Lou López driving to the basket for UConn against Duke" width="1920" height="1080" loading="lazy" />
+            <figcaption>UConn · 2022–23 <span>Photo: UConn Athletics</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-07" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-09" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-08" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-09" role="dialog" aria-label="Photo 9 of 20">
+          <figure>
+            <img src="img/galeria/09.webp" alt="Lou López protecting the ball from a Marquette defender" width="1920" height="1080" loading="lazy" />
+            <figcaption>UConn · 2022–23 <span>Photo: UConn Athletics</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-08" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-10" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-09" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-10" role="dialog" aria-label="Photo 10 of 20">
+          <figure>
+            <img src="img/galeria/10.webp" alt="Lou López, number 11, with her arms out wide at Villanova" width="1920" height="1080" loading="lazy" />
+            <figcaption>UConn · 2022–23 <span>Photo: UConn Athletics</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-09" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-11" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-10" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-11" role="dialog" aria-label="Photo 11 of 20">
+          <figure>
+            <img src="img/galeria/11.webp" alt="Lou López slapping hands with a UConn teammate" width="1920" height="1083" loading="lazy" />
+            <figcaption>UConn · 2022–23 <span>Photo: UConn Athletics</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-10" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-12" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-11" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-12" role="dialog" aria-label="Photo 12 of 20">
+          <figure>
+            <img src="img/galeria/12.webp" alt="Lou López talking with two UConn teammates during a game" width="1920" height="1080" loading="lazy" />
+            <figcaption>UConn · 2022–23 <span>Photo: UConn Athletics</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-11" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-13" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-12" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-13" role="dialog" aria-label="Photo 13 of 20">
+          <figure>
+            <img src="img/galeria/13.webp" alt="Lou López shooting over a defender for Fairfield at Indiana" width="1920" height="1279" loading="lazy" />
+            <figcaption>Fairfield · 2021–22 <span>Photo: Fairfield Athletics</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-12" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-14" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-13" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-14" role="dialog" aria-label="Photo 14 of 20">
+          <figure>
+            <img src="img/galeria/14.webp" alt="Lou López going up for a shot against Texas in the NCAA Tournament" width="1920" height="1280" loading="lazy" />
+            <figcaption><strong>Fairfield</strong>NCAA Tournament · 2022 <span>Photo: Fairfield Athletics</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-13" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-15" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-14" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-15" role="dialog" aria-label="Photo 15 of 20">
+          <figure>
+            <img src="img/galeria/15.webp" alt="Lou López celebrating on court with her fists clenched" width="1920" height="1280" loading="lazy" />
+            <figcaption>Fairfield · 2021–22 <span>Photo: Fairfield Athletics</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-14" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-16" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-15" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-16" role="dialog" aria-label="Photo 16 of 20">
+          <figure>
+            <img src="img/galeria/16.webp" alt="Lou López finishing a layup for Fairfield" width="1920" height="1280" loading="lazy" />
+            <figcaption>Fairfield · 2021–22 <span>Photo: Fairfield Athletics</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-15" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-17" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-16" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-17" role="dialog" aria-label="Photo 17 of 20">
+          <figure>
+            <img src="img/galeria/17.webp" alt="Lou López rising for a jump shot for Fairfield" width="1920" height="1280" loading="lazy" />
+            <figcaption>Fairfield · 2021–22 <span>Photo: Fairfield Athletics</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-16" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-18" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-17" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-18" role="dialog" aria-label="Photo 18 of 20">
+          <figure>
+            <img src="img/galeria/18.webp" alt="Lou López driving past a Siena defender" width="1920" height="1280" loading="lazy" />
+            <figcaption>Fairfield · 2021–22 <span>Photo: Fairfield Athletics</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-17" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-19" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-18" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-19" role="dialog" aria-label="Photo 19 of 20">
+          <figure>
+            <img src="img/galeria/19.webp" alt="Lou López shooting a jumper for Fairfield" width="1920" height="1048" loading="lazy" />
+            <figcaption>Fairfield · 2021–22 <span>Photo: Fairfield Athletics</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-18" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-20" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-19" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <div class="lightbox" id="foto-20" role="dialog" aria-label="Photo 20 of 20">
+          <figure>
+            <img src="img/galeria/20.webp" alt="Lou López dribbling against a Marist defender" width="1920" height="1046" loading="lazy" />
+            <figcaption>Fairfield · 2020–21 <span>Photo: Fairfield Athletics</span></figcaption>
+          </figure>
+          <a class="lightbox__nav lightbox__nav--prev" href="#foto-19" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__nav lightbox__nav--next" href="#foto-01" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg></a>
+          <a class="lightbox__close" href="#t-20" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+        </div>
+        <!-- galeria:fin -->
+      </section>
+
+      <!-- ─────────────── Contact ───────────────
+           The email address is a PLACEHOLDER (the .example domain cannot exist): replace it in both
+           places below. Instagram and TikTok are her public accounts; the club link is the club's own site. -->
+      <section id="contact" class="contact">
+        <svg class="contact__mark" viewBox="1220 142 410 640" fill="currentColor" aria-hidden="true">
+          <path d="M1356 159 1456 142 1329 639l63-9.5-7 27L1220 682ZM1481 299l96-18-107 424 160-35-19 61-265 51Z" />
+        </svg>
+        <div class="wrap">
+          <header class="section-head">
+            <p class="section-label"><span>04</span>Contact</p>
+            <h2 class="statement">
+              <span style="--i: 0">Get</span> <span style="--i: 1">in</span>
+              <strong><span style="--i: 2">touch.</span></strong>
+            </h2>
+          </header>
+
+          <div class="contact__body">
+            <p class="contact__lead reveal">For press and partnerships, or just to say hello.</p>
+            <ul class="contact__list">
+              <li class="reveal">
+                <a href="mailto:hello@loulopez.example">
+                  <span class="contact__kind">Email</span>
+                  <span class="contact__value">hello@loulopez.example</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M2 12h20M15 5l7 7-7 7" /></svg>
+                </a>
+              </li>
+              <li class="reveal">
+                <a href="https://www.instagram.com/loulpzs/" target="_blank" rel="noopener">
+                  <span class="contact__kind">Instagram</span>
+                  <span class="contact__value">@loulpzs</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11" /></svg>
+                </a>
+              </li>
+              <li class="reveal">
+                <a href="https://www.tiktok.com/@loulpzs" target="_blank" rel="noopener">
+                  <span class="contact__kind">TikTok</span>
+                  <span class="contact__value">@loulpzs</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11" /></svg>
+                </a>
+              </li>
+              <li class="reveal">
+                <a href="https://www.hozonojairis.com/" target="_blank" rel="noopener">
+                  <span class="contact__kind">Club</span>
+                  <span class="contact__value">Hozono Global Jairis</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11" /></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="site-footer__top">
+          <a href="#home" class="footer-brand" aria-label="Lou López, back to top">
+            <svg viewBox="0 0 48 48" fill="currentColor" aria-hidden="true">
+              <path d="M8 5 16.5 3.5 12 35l9-1.2-1.4 5.4L1.8 41.5Z" />
+              <path d="M21 2.6 25.6 1.4 19.4 29.5Z" />
+              <path d="M28.3 13.6 36.6 11.4 31.6 38.3l15-3-2 5.5L22 45.6Z" />
+            </svg>
+            <span>Lou López</span>
+          </a>
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#career">Career</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="site-footer__bottom">
+          <p>© 2026 Lou López Sénéchal</p>
+          <a class="site-footer__credit" href="https://diegomorales.es" target="_blank" rel="noopener">
+            Website by
+            <img src="img/dm-monograma.png" alt="Diego Morales" width="138" height="96" loading="lazy" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
