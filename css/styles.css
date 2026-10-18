@@ -237,10 +237,17 @@ body {
   display: block;
 }
 
-/* The accent of the Ó bites into the O above it; this halo cuts the notch. */
+/* The accents of Ó and É bite into the line above; this halo cuts the notch. */
 .hero__title span + span {
   -webkit-text-stroke: 0.045em var(--light);
   paint-order: stroke fill;
+}
+
+/* Sénéchal is set to exactly the width of López (measured ratio of the two words in Montserrat 900).
+   Its accents clear the line above, so it needs no halo; without one it sits cleanly over the shoe. */
+.hero__title span:nth-child(3) {
+  font-size: 0.6127em;
+  -webkit-text-stroke: 0;
 }
 
 .hero__tagline {
