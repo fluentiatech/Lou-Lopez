@@ -1640,6 +1640,73 @@ html:has(.lightbox:target) {
   right: clamp(0.75rem, 2vw, 1.5rem);
 }
 
+/* ─────────────────────────── Highlights ────────────────────────── */
+.highlights {
+  --line: rgba(242, 238, 233, 0.14);
+  --dim: rgba(242, 238, 233, 0.58);
+  padding-block: clamp(5rem, 11vw, 11rem);
+  background: var(--ink);
+  color: var(--light);
+}
+
+.highlights .section-label {
+  color: var(--dim);
+}
+
+.clip {
+  margin: 0;
+}
+
+.clip video {
+  display: block;
+  width: 100%;
+  height: auto; /* the width/height attributes only reserve space; the column sets the size */
+  aspect-ratio: 16 / 9;
+  background: #000;
+  object-fit: cover;
+}
+
+.clip figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--dim);
+}
+
+.clip figcaption strong {
+  margin-right: 0.5rem;
+  font-weight: 600;
+  color: var(--light);
+}
+
+.clip figcaption span {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.clips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem) var(--gap);
+  margin: clamp(3rem, 6vw, 5rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 900px) {
+  .clips {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .clips {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ─────────────────────────── Contact ────────────────────────── */
 
 /* The page ends where it began: the same wall, light and monogram as the hero */
