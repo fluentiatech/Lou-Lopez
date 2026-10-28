@@ -12,7 +12,7 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
     <link rel="preload" href="fonts/montserrat-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" as="image" href="img/hero-reel.webp" fetchpriority="high" />
-    <link rel="stylesheet" href="css/styles.css?v=20261028b" />
+    <link rel="stylesheet" href="css/styles.css?v=20261029a" />
   </head>
 
   <body>
@@ -62,8 +62,8 @@
              One file and no JavaScript; with reduced motion only the poster frame shows. -->
         <div class="hero__reel" aria-hidden="true">
           <video autoplay muted loop playsinline preload="auto" poster="img/hero-reel.webp" width="1920" height="1080">
-            <!-- Phones get 720p (they only show the middle of the frame); everything else 1080p -->
-            <source src="img/hero-reel-720.mp4" type="video/mp4" media="(max-width: 640px)" />
+            <!-- Portrait screens get a vertical cut that follows Lou through each play; everything else 1080p -->
+            <source src="img/hero-reel-movil.mp4" type="video/mp4" media="(max-aspect-ratio: 21/20)" />
             <source src="img/hero-reel.mp4" type="video/mp4" />
           </video>
         </div>

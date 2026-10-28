@@ -615,6 +615,15 @@ body {
     background: var(--ink);
   }
 
+  /* The vertical cut is already framed on Lou: no extra zoom */
+  .hero__reel {
+    background-image: url('../img/hero-reel-movil.webp');
+  }
+
+  .hero__reel video {
+    scale: 1;
+  }
+
   .hero__reel::after {
     background:
       radial-gradient(70% 40% at 100% 0%, rgba(139, 92, 246, 0.34), rgba(139, 92, 246, 0) 70%),
