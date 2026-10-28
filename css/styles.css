@@ -2140,3 +2140,44 @@ html:has(.lightbox:target) {
 .site-footer {
   border-top: 2px solid var(--violet);
 }
+
+/* Mobile menu: the deep violet of the quote section, with violet numbers */
+@media (max-aspect-ratio: 21/20), (max-width: 640px) {
+  .menu {
+    background:
+      radial-gradient(90% 55% at 100% 0%, rgba(139, 92, 246, 0.5), rgba(139, 92, 246, 0) 70%),
+      radial-gradient(80% 45% at 0% 100%, rgba(139, 92, 246, 0.28), rgba(139, 92, 246, 0) 70%),
+      #1c1330;
+    color: var(--light);
+  }
+
+  .menu a {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6em;
+  }
+
+  .menu a span {
+    font-size: 0.32em;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #b49bff;
+    translate: 0 -0.9em;
+    min-width: 2.4em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .menu a:active,
+  .menu a:hover {
+    color: #c4b2ff;
+  }
+
+  /* The header stays light over the violet panel */
+  .site-header:has(.menu:target) {
+    color: var(--light);
+  }
+
+  .site-header:has(.menu:target) .menu-toggle span {
+    background: var(--light);
+  }
+}
