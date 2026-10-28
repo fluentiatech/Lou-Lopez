@@ -22,11 +22,13 @@ OUT = os.path.join(ROOT, "img")
 
 # output name: (source under design/, crop box in source pixels, output width, keep transparency)
 CROPS = {
-    "about-jairis.webp": ("fotos-galeria/jairis-copa-2025-IMG_7079.jpg", (0, 100, 1500, 944), 1500, False),
+    "about-jairis.webp": ("fotos-candidatas/jairis-copa-2025-mentxaka-sonrisa.jpg", (0, 110, 2000, 1235), 1500, False),
     "career-fairfield.webp": ("fotos-candidatas/fairfield-mejor-jugadora-2022.jpg", (427, 0, 1493, 1333), 800, False),
     "career-uconn.webp": ("fotos-candidatas/uconn-vs-marquette.jpg", (432, 0, 1296, 1080), 800, False),
-    "career-dallas.webp": ("fotos-candidatas/dallas-wnba-retrato.png", (216, 0, 824, 760), 608, True),
-    "career-jairis.webp": ("fotos-candidatas/jairis-entrevista-2024-gigantes.jpg", (318, 0, 734, 520), 416, False),
+    "career-dallas.webp": ("fotos-candidatas/dallas-tiro-seattle.jpg", (60, 150, 960, 1275), 800, False),
+    "career-brno.webp": ("fotos-candidatas/zabiny-tiro.jpg", (373, 0, 1226, 1066), 800, False),
+    "career-france.webp": ("fotos-candidatas/francia-bote.jpg", (213, 0, 1067, 1067), 800, False),
+    "career-jairis.webp": ("fotos-candidatas/jairis-copa-2025-trofeo.jpg", (580, 0, 1623, 1304), 800, False),
 }
 
 for name, (src, box, width, alpha) in CROPS.items():

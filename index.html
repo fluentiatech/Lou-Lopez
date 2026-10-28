@@ -11,26 +11,20 @@
     <meta name="theme-color" content="#f2eee9" />
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
     <link rel="preload" href="fonts/montserrat-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
-    <link
-      rel="preload"
-      as="image"
-      href="img/lou-hero.webp"
-      imagesrcset="img/lou-hero.webp 1304w, img/lou-hero-1956.webp 1956w, img/lou-hero-2608.webp 2608w"
-      imagesizes="(max-aspect-ratio: 21/20) min(130vw, 62vh), (max-width: 640px) min(130vw, 62vh), min(72vw, 128vh)"
-      fetchpriority="high"
-    />
-    <link rel="stylesheet" href="css/styles.css?v=20261018d" />
+    <link rel="preload" as="image" href="img/hero-reel.webp" fetchpriority="high" />
+    <link rel="stylesheet" href="css/styles.css?v=20261028b" />
   </head>
 
   <body>
     <header class="site-header">
       <div class="site-header__inner">
         <a href="#home" class="brand" aria-label="Lou López, home">
-          <!-- "LL" monogram: two leaning L's with the accent of López between them -->
-          <svg class="brand__mark" viewBox="0 0 48 48" fill="currentColor" aria-hidden="true">
+          <!-- "LLS" monogram: two leaning L's with the accent of López between them, then the S of Sénéchal -->
+          <svg class="brand__mark" viewBox="0 0 74 48" fill="currentColor" aria-hidden="true">
             <path d="M8 5 16.5 3.5 12 35l9-1.2-1.4 5.4L1.8 41.5Z" />
-            <path d="M21 2.6 25.6 1.4 19.4 29.5Z" />
+            <path class="mark__accent" d="M21 2.6 25.6 1.4 19.4 29.5Z" />
             <path d="M28.3 13.6 36.6 11.4 31.6 38.3l15-3-2 5.5L22 45.6Z" />
+<path d="M55.8 7 72.3 3.5 71.3 8.8 61.6 10.9 59.9 20.4 69.6 18.4 66 38.5 49.5 42 50.5 36.7 60.2 34.7 61.9 25.1 52.2 27.1Z" />
           </svg>
           <span class="brand__name">Lou López</span>
         </a>
@@ -64,19 +58,16 @@
     <main>
       <!-- All SVG coordinates are in the design stage: 1672 × 941 (the approved mockup) -->
       <section id="home" class="hero">
+        <!-- Highlight reel: six plays from img/clips cut into one silent loop (see design/clips/FUENTES.md).
+             One file and no JavaScript; with reduced motion only the poster frame shows. -->
+        <div class="hero__reel" aria-hidden="true">
+          <video autoplay muted loop playsinline preload="auto" poster="img/hero-reel.webp" width="1920" height="1080">
+            <!-- Phones get 720p (they only show the middle of the frame); everything else 1080p -->
+            <source src="img/hero-reel-720.mp4" type="video/mp4" media="(max-width: 640px)" />
+            <source src="img/hero-reel.mp4" type="video/mp4" />
+          </video>
+        </div>
         <div class="hero__stage">
-          <!-- Window light falling across the wall. The edge is one huge soft circle,
-               so it keeps running past the stage on wide or tall screens. -->
-          <svg class="hero__light" viewBox="0 0 1672 941" aria-hidden="true">
-            <defs>
-              <radialGradient id="hero-light" gradientUnits="userSpaceOnUse" cx="-2382" cy="6101" r="6408">
-                <stop offset="0.9958" stop-color="#f2eee9" />
-                <stop offset="1" stop-color="#f2eee9" stop-opacity="0" />
-              </radialGradient>
-            </defs>
-            <circle cx="-2382" cy="6101" r="6408" fill="url(#hero-light)" />
-          </svg>
-
           <div class="hero__copy">
             <p class="hero__eyebrow">Basketball player</p>
             <h1 class="hero__title">
@@ -86,7 +77,7 @@
             </h1>
             <p class="hero__tagline">
               Same passion.<br />
-              Bigger dreams.
+              <span class="hero__dream">Bigger dreams.</span>
             </p>
             <a class="hero__cta" href="#about">
               About me
@@ -94,23 +85,6 @@
                 <path d="M0 5h23M18.6 0.8 23 5l-4.4 4.2" />
               </svg>
             </a>
-          </div>
-
-          <div class="hero__figure">
-            <svg class="hero__mark" viewBox="1220 142 410 640" fill="currentColor" aria-hidden="true">
-              <path d="M1356 159 1456 142 1329 639l63-9.5-7 27L1220 682ZM1481 299l96-18-107 424 160-35-19 61-265 51Z" />
-            </svg>
-            <img
-              class="hero__player"
-              src="img/lou-hero.webp"
-              srcset="img/lou-hero.webp 1304w, img/lou-hero-1956.webp 1956w, img/lou-hero-2608.webp 2608w"
-              sizes="(max-aspect-ratio: 21/20) min(130vw, 62vh), (max-width: 640px) min(130vw, 62vh), min(72vw, 128vh)"
-              alt="Lou López in her white game uniform, laughing as she flicks a basketball up with her foot"
-              width="1304"
-              height="1315"
-              fetchpriority="high"
-              draggable="false"
-            />
           </div>
 
           <a class="hero__scroll" href="#about">
@@ -171,10 +145,11 @@
 
               <figure class="ph ph--landscape reveal">
                 <div class="ph__frame" role="img" aria-label="Photo to come: Lou as a child">
-                  <svg class="ph__mark" viewBox="0 0 48 48" fill="currentColor" aria-hidden="true">
+                  <svg class="ph__mark" viewBox="0 0 74 48" fill="currentColor" aria-hidden="true">
                     <path d="M8 5 16.5 3.5 12 35l9-1.2-1.4 5.4L1.8 41.5Z" />
-                    <path d="M21 2.6 25.6 1.4 19.4 29.5Z" />
+                    <path class="mark__accent" d="M21 2.6 25.6 1.4 19.4 29.5Z" />
                     <path d="M28.3 13.6 36.6 11.4 31.6 38.3l15-3-2 5.5L22 45.6Z" />
+<path d="M55.8 7 72.3 3.5 71.3 8.8 61.6 10.9 59.9 20.4 69.6 18.4 66 38.5 49.5 42 50.5 36.7 60.2 34.7 61.9 25.1 52.2 27.1Z" />
                   </svg>
                   <span class="ph__note">Childhood, Grenoble or Guadalajara · 3:2</span>
                 </div>
@@ -219,9 +194,9 @@
           <div class="glance">
             <figure class="ph ph--wide reveal">
               <div class="ph__frame">
-                <img src="img/about-jairis.webp" alt="Lou López, number 19, in the air after releasing a three-point shot in the 2025 Copa de la Reina final" width="1500" height="844" loading="lazy" />
+                <img src="img/about-jairis.webp" alt="Lou López, number 19, smiling and pointing back at a team-mate after a basket in the 2025 Copa de la Reina final" width="1500" height="844" loading="lazy" />
               </div>
-              <figcaption>Copa de la Reina final · 2025. Photo: Campo Atrás</figcaption>
+              <figcaption>Copa de la Reina final · 2025. Photo: María Mentxaka</figcaption>
             </figure>
 
             <dl class="facts reveal">
@@ -421,9 +396,9 @@
                 </div>
                 <figure class="ph stage__photo reveal">
                   <div class="ph__frame">
-                    <img src="img/career-dallas.webp" alt="Portrait of Lou López smiling in a Dallas Wings jersey" width="608" height="760" loading="lazy" />
+                    <img src="img/career-dallas.webp" alt="Lou López, number 8 for the Dallas Wings, rising for a jump shot over a Seattle Storm defender" width="800" height="1000" loading="lazy" />
                   </div>
-                  <figcaption>Photo: WNBA</figcaption>
+                  <figcaption>Dallas Wings at Seattle · 2024</figcaption>
                 </figure>
               </div>
             </li>
@@ -456,9 +431,15 @@
                     </tbody>
                   </table>
                 </div>
+                <figure class="ph stage__photo reveal">
+                  <div class="ph__frame">
+                    <img src="img/career-brno.webp" alt="Lou López, number 11 in the purple Žabiny Brno kit, shooting a jumper over a defender" width="800" height="1000" loading="lazy" />
+                  </div>
+                  <figcaption>Žabiny Brno · 2023</figcaption>
+                </figure>
               </div>
             </li>
-            <li class="stage stage--brief">
+            <li class="stage">
               <div class="stage__when">
                 <p class="stage__years">Since 2023</p>
                 <p class="stage__place">France</p>
@@ -469,6 +450,12 @@
                   <h3 class="stage__team">France</h3>
                   <p class="stage__text">First call-up at 25, for the EuroBasket qualifiers.</p>
                 </div>
+                <figure class="ph stage__photo reveal">
+                  <div class="ph__frame">
+                    <img src="img/career-france.webp" alt="Lou López bringing the ball up the court for France, number 8" width="800" height="1000" loading="lazy" />
+                  </div>
+                  <figcaption>France</figcaption>
+                </figure>
               </div>
             </li>
             <li class="stage stage--current">
@@ -510,9 +497,9 @@
                 </div>
                 <figure class="ph stage__photo reveal">
                   <div class="ph__frame">
-                    <img src="img/career-jairis.webp" alt="Lou López smiling on court in a yellow Hozono Global Jairis warm-up shirt with the number 19" width="416" height="520" loading="lazy" />
+                    <img src="img/career-jairis.webp" alt="Lou López kissing the Copa de la Reina trophy on court under falling confetti" width="800" height="1000" loading="lazy" />
                   </div>
-                  <figcaption>Photo: Gigantes del Basket</figcaption>
+                  <figcaption>Copa de la Reina champions · 2025</figcaption>
                 </figure>
               </div>
             </li>
@@ -960,10 +947,11 @@
       <div class="wrap">
         <div class="site-footer__top">
           <a href="#home" class="footer-brand" aria-label="Lou López, back to top">
-            <svg viewBox="0 0 48 48" fill="currentColor" aria-hidden="true">
+            <svg viewBox="0 0 74 48" fill="currentColor" aria-hidden="true">
               <path d="M8 5 16.5 3.5 12 35l9-1.2-1.4 5.4L1.8 41.5Z" />
-              <path d="M21 2.6 25.6 1.4 19.4 29.5Z" />
+              <path class="mark__accent" d="M21 2.6 25.6 1.4 19.4 29.5Z" />
               <path d="M28.3 13.6 36.6 11.4 31.6 38.3l15-3-2 5.5L22 45.6Z" />
+<path d="M55.8 7 72.3 3.5 71.3 8.8 61.6 10.9 59.9 20.4 69.6 18.4 66 38.5 49.5 42 50.5 36.7 60.2 34.7 61.9 25.1 52.2 27.1Z" />
             </svg>
             <span>Lou López</span>
           </a>

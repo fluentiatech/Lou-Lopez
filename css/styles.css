@@ -43,6 +43,10 @@ svg {
   --ink-soft: #2e2e2e;
   --wall: #d7d4d0;
   --light: #f2eee9;
+  /* Violet, her favourite colour: used only as glints, never as a surface. */
+  --violet: #8b5cf6;
+  --violet-ink: #6d28d9; /* text on --light, 6.4:1 */
+  --violet-glow: rgba(139, 92, 246, 0.22);
   --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
 
   /* 1u = 1% of the hero stage width. The stage is the 1672 × 941 mockup,
@@ -66,6 +70,16 @@ body {
 :focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 4px;
+}
+
+::selection {
+  background: var(--violet);
+  color: #fff;
+}
+
+/* The accent of López in the LLS monogram */
+.mark__accent {
+  fill: var(--violet);
 }
 
 /* ─────────────────────────── Header ─────────────────────────── */
@@ -92,10 +106,11 @@ body {
   gap: calc(var(--u) * 2.45);
 }
 
+/* LLS monogram: 74 × 48 */
 .brand__mark {
-  width: calc(var(--u) * 2.87);
+  width: calc(var(--u) * 4.42);
   height: calc(var(--u) * 2.87);
-  min-width: 34px;
+  min-width: 52px;
   min-height: 34px;
 }
 
@@ -132,7 +147,7 @@ body {
   right: 0.1em;
   top: calc(100% - var(--u) * 0.38);
   height: max(1.5px, calc(var(--u) * 0.11));
-  background: var(--ink);
+  background: var(--violet);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s var(--ease-out);
@@ -344,7 +359,7 @@ body {
   }
 
   .brand__mark {
-    width: calc(var(--u) * 9.5);
+    width: calc(var(--u) * 14.6);
     height: calc(var(--u) * 9.5);
   }
 
@@ -512,6 +527,110 @@ body {
     top: 6%;
     width: auto;
     height: 74%;
+  }
+}
+
+/* ─────────────────────── Hero highlight reel ───────────────────────
+   The reel runs behind the whole hero; the copy turns light over it. */
+
+.hero {
+  background: var(--ink);
+  color: var(--light);
+}
+
+.hero__reel {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #111 url('../img/hero-reel.webp') center / cover;
+}
+
+.hero__reel video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Push the broadcasters' corner logos out of frame */
+  scale: 1.12;
+  transform-origin: 30% 60%;
+}
+
+/* Darken towards the copy, and let a violet glint in from the right */
+.hero__reel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(45% 60% at 92% 18%, rgba(139, 92, 246, 0.34), rgba(139, 92, 246, 0) 70%),
+    radial-gradient(35% 45% at 70% 108%, rgba(139, 92, 246, 0.22), rgba(139, 92, 246, 0) 70%),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.72) 34%, rgba(17, 17, 17, 0.3) 62%, rgba(17, 17, 17, 0.45) 100%),
+    linear-gradient(0deg, rgba(17, 17, 17, 0.7) 0%, rgba(17, 17, 17, 0) 40%);
+}
+
+.hero__light,
+.hero__mark {
+  display: none;
+}
+
+.site-header {
+  color: var(--light);
+}
+
+.site-header .nav a,
+.hero__eyebrow,
+.hero__scroll {
+  color: rgba(242, 238, 233, 0.78);
+}
+
+.hero__title span + span {
+  -webkit-text-stroke-color: transparent;
+}
+
+.hero__cta {
+  background: var(--light);
+  color: var(--ink);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero__cta:hover {
+  background: var(--violet);
+  color: #fff;
+}
+
+.hero__scroll-line {
+  background: rgba(242, 238, 233, 0.25);
+}
+
+.hero__scroll-line::after {
+  background: var(--violet);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__reel video {
+    display: none;
+  }
+}
+
+@media (max-aspect-ratio: 21/20), (max-width: 640px) {
+  .hero {
+    background: var(--ink);
+  }
+
+  .hero__reel::after {
+    background:
+      radial-gradient(70% 40% at 100% 0%, rgba(139, 92, 246, 0.34), rgba(139, 92, 246, 0) 70%),
+      linear-gradient(180deg, rgba(17, 17, 17, 0.88) 0%, rgba(17, 17, 17, 0.6) 55%, rgba(17, 17, 17, 0.25) 80%, rgba(17, 17, 17, 0.55) 100%);
+  }
+
+  .menu-toggle span {
+    background: var(--light);
+  }
+
+  .site-header:has(.menu:target) {
+    color: var(--ink);
+  }
+
+  .site-header:has(.menu:target) .menu-toggle span {
+    background: var(--ink);
   }
 }
 
@@ -1830,7 +1949,7 @@ html:has(.lightbox:target) {
 }
 
 .footer-brand svg {
-  width: 2.5rem;
+  width: 3.85rem;
   height: 2.5rem;
 }
 
@@ -1898,4 +2017,117 @@ html:has(.lightbox:target) {
   .contact__kind {
     grid-column: 1 / -1;
   }
+}
+
+/* ─────────────────────────── Violet glints ───────────────────────────
+   Her favourite colour. Small touches only: numbers, the current stage,
+   hover states and a soft light in the corners of the dark sections. */
+
+.section-label span {
+  color: var(--violet-ink);
+}
+
+.career .section-label span,
+.highlights .section-label span {
+  color: #b49bff;
+}
+
+.statement strong {
+  text-decoration: underline;
+  text-decoration-color: var(--violet);
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.12em;
+}
+
+.quote,
+.career,
+.highlights {
+  background-image:
+    radial-gradient(40rem 28rem at 100% 0%, var(--violet-glow), rgba(139, 92, 246, 0) 70%),
+    radial-gradient(30rem 22rem at 0% 100%, rgba(139, 92, 246, 0.1), rgba(139, 92, 246, 0) 70%);
+  background-repeat: no-repeat;
+}
+
+.stage--current::before {
+  border-color: var(--violet);
+  background: var(--violet);
+  box-shadow: 0 0 0 5px rgba(139, 92, 246, 0.22), 0 0 22px 4px rgba(139, 92, 246, 0.45);
+}
+
+.stage__league em {
+  background: var(--violet);
+  color: #fff;
+}
+
+.honours li {
+  border-color: rgba(167, 139, 250, 0.45);
+}
+
+.contact__list a:hover svg,
+.contact__list a:focus-visible svg {
+  color: var(--violet-ink);
+}
+
+/* More violet (28 Oct 2026): one deep violet section, and violet on
+   whatever moves or stands out. Still never on top of a photo. */
+
+.hero__dream {
+  color: #c4b2ff;
+  font-weight: 500;
+}
+
+.section-label span::after {
+  background: var(--violet);
+}
+
+/* The quote is the one section that takes violet as its surface */
+.quote {
+  background-color: #1c1330;
+  background-image:
+    radial-gradient(48rem 30rem at 100% 0%, rgba(139, 92, 246, 0.38), rgba(139, 92, 246, 0) 70%),
+    radial-gradient(36rem 26rem at 0% 100%, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0) 70%);
+}
+
+.quote strong {
+  color: #c4b2ff;
+}
+
+.quote__mark {
+  color: #b49bff;
+  opacity: 0.08;
+}
+
+.stats .stat__pts {
+  color: #c4b2ff;
+}
+
+.gallery__filter input:checked + span {
+  border-color: var(--violet-ink);
+  background: var(--violet-ink);
+}
+
+.tile__label {
+  background: linear-gradient(rgba(28, 19, 48, 0), rgba(28, 19, 48, 0.8));
+}
+
+.clip video {
+  transition: box-shadow 0.35s ease;
+}
+
+.clip video:hover,
+.clip video:focus-visible {
+  box-shadow: 0 0 0 2px var(--violet), 0 18px 50px -12px rgba(139, 92, 246, 0.55);
+}
+
+.clip figcaption strong {
+  color: #c4b2ff;
+}
+
+.contact__list a:hover .contact__value,
+.contact__list a:focus-visible .contact__value {
+  color: var(--violet-ink);
+}
+
+.site-footer {
+  border-top: 2px solid var(--violet);
 }
